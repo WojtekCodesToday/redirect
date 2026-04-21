@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <script>
-        const currentPath = window.location.pathname;
-        const currentSearch = window.location.search;
-        const currentHash = window.location.hash;
-        const newDomain = "https://wjgm.pl";
-        const newURL = newDomain + currntPath + currentSearch + currentHash;
-        window.location.replace(newURL);
-    </script>
 </head>
 <body>
-    <p>Moving to wigm.pl<br>If you aren't redirected, <a id="manual-link" href="#">click here</a>.</p>
+    <p>Moving to wigm.pl<br><img src="http://wjgm.pl/img/alone.png" loading="lazy"> If you aren't redirected, <a id="manual-link" href="#">click here</a>.</p>
     <script>
-        document.getElementById('manual-link').href = "https://wjgm.pl" + window.location.pathname;
+        let location = window.location;//why
+        const newURL = "https://wjgm.pl" + location.hash + location.search + location.pathname;
+        window.location.replace(newURL);
+        document.getElementById('manual-link').href = newUrl;
     </script>
 </body>
 </html>
