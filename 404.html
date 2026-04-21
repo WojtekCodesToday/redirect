@@ -6,12 +6,12 @@
     <title>Redirecting...</title>
 </head>
 <body>
-    <p>Moving to wigm.pl<br><img src="http://wjgm.pl/img/alone.png" loading="lazy"> If you aren't redirected, <a id="manual-link" href="#">click here</a>.</p>
+    <p>Moving to wigm.pl<br><img src="https://wjgm.pl/img/alone.png" loading="lazy"><br>If you aren't redirected, <a id="manual-link" href="#">click here</a>.</p>
     <script>
-        let location = window.location;//why
-        const newURL = "https://wjgm.pl" + location.hash + location.search + location.pathname;
+        let l = window.location;//why
+        const newURL = "https://wjgm.pl" + l.hash + l.search + l.pathname;
         window.location.replace(newURL);
-        document.getElementById('manual-link').href = newUrl;
+        document.getElementById('manual-link').href = newURL;
     </script>
 </body>
 </html>
