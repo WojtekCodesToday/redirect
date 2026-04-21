@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        const currentPath = window.location.pathname;
+        const currentSearch = window.location.search;
+        const currentHash = window.location.hash;
+        const newDomain = "https://wjgm.pl";
+        const newURL = newDomai + currntPath + currentSearch + currentHash;
+        window.location.replace(newURL);
+    </script>
+</head>
+<body>
+    <p>Moving to wigm.pl<br>If you aren't redirected, <a id="manual-link" href="#">click here</a>.</p>
+    <script>
+        document.getElementById('manual-link').href = "https://wjgm.pl" + window.location.pathname;
+    </script>
+</body>
+</html>
